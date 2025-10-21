@@ -6,9 +6,6 @@
   <xacro:arg name="static" default="true"/>
   <xacro:arg name="electric_gripper" default="false"/>
 
-  <!-- ======================= -->
-  <!-- SAWYER BASE -->
-  <!-- ======================= -->
   <xacro:include filename="$(find sawyer_description)/urdf/sawyer_base.urdf.xacro">
     <xacro:arg name="gazebo" value="${gazebo}"/>
     <xacro:arg name="pedestal" value="${pedestal}"/>
@@ -29,9 +26,15 @@
 
   <xacro:include filename="$(find simulation)/urdf/sensors/kinetic_rgb.urdf.xacro"/>
 
-  <xacro:kinetic_rgb name="kinect" parent="base">
+  <xacro:kinetic_rgb name="asus" parent="base">
     <origin xyz="0.5 0.0 1.0" rpy="0 1.57 0"/>
     <optical_origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:kinetic_rgb>
+
+  <xacro:kinetic_rgb name="logi" parent="base">
+    <origin xyz="1.5 0.0 1.0" rpy="0 1.57 0"/>
+    <optical_origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:kinetic_rgb>
+
 
 </robot>
