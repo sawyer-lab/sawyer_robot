@@ -24,6 +24,4 @@
     </xacro:include>
   </xacro:if>
 
-  <xacro:include filename="$(find simulation)/urdf/sensors/kinetic_rgb.urdf.xacro"/>
-
 </robot>
